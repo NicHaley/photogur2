@@ -1,4 +1,5 @@
-<%= link_to "Back to Pictures" , pictures_url %> | <%= link_to "Edit", edit_picture_url %> | <%= link_to "Delete", @picture, method: :delete, data: {confirm: "Are you sure you want to delete this picture?"}  %>
+<h1><%= @picture.title %>, <%= @picture.artist %></h2><br>
 
-<p><%= @picture.title %>, <%= @picture.artist %></p>
-<%= image_tag @picture.url %>
+<%= image_tag @picture.url %><br>
+
+<%= link_to "Back to Pictures" , pictures_url %> | <%= link_to "Edit", edit_picture_url %> | <%= link_to "Delete", @picture, method: :delete, data: {confirm: "Are you sure you want to delete this picture?"}  %>
