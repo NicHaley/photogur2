@@ -1,7 +1,7 @@
 <h1>photogur</h1><br>
 <%= link_to "Add a Picture!", new_picture_url %>
 
-<% @pictures.each do |picture| %>
+<% @most_recent_pictures.each do |picture| %>
 	<p><%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %>
 	<p><%= picture.title %>, <%= picture.artist %></p>
 	<br>
