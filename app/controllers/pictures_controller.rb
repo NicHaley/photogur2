@@ -1,6 +1,7 @@
 class PicturesController < ApplicationController
 	def index
 		@most_recent_pictures = Picture.most_recent_five
+		@older_pictures = Picture.created_before(0.day.ago)
 	end
 
 	def show
